@@ -7,12 +7,12 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 const base = '/uma-commerce-classes-demo';
 ---
 
-<Layout title="The Institute" description="Discover the story of Uma Commerce Classes and the teaching philosophy of Anuja Mittal Ma'am (Uma Ma'am) in Kota.">
+<Layout title="The Institute" description="Discover the story of Uma Classes and the teaching philosophy of Anuja Mittal Ma'am (Uma Ma'am) in Kota.">
   <Navbar />
   
-  <main>
+  <main class="dark:bg-[#0f1923] transition-colors duration-300">
     <!-- Page Header -->
-    <section class="bg-primary text-white py-24 relative overflow-hidden">
+    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628]">
       <div class="absolute inset-0 opacity-10">
         <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent rounded-full filter blur-3xl"></div>
       </div>
@@ -26,12 +26,12 @@ const base = '/uma-commerce-classes-demo';
       </div>
     </section>
 
-    <!-- Founder Spotlight Redesign -->
-    <section class="section-padding bg-white overflow-hidden">
+    <!-- Founder Spotlight -->
+    <section class="section-padding bg-white overflow-hidden dark:bg-[#0f1923]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div class="relative">
-            <div class="aspect-[4/5] bg-bg-light rounded-[3rem] overflow-hidden border-[16px] border-white shadow-2xl relative z-10 flex items-center justify-center group">
+            <div class="aspect-[4/5] bg-bg-light rounded-[3rem] overflow-hidden border-[16px] border-white shadow-2xl relative z-10 flex items-center justify-center group dark:bg-[#1a2332] dark:border-gray-800">
               <span class="text-[12rem] opacity-20 group-hover:scale-110 transition-transform duration-700">👩‍🏫</span>
               <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
               <div class="absolute bottom-12 left-12 text-white">
@@ -47,19 +47,19 @@ const base = '/uma-commerce-classes-demo';
           <div class="space-y-8">
             <div class="space-y-2">
                <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Academic Visionary</p>
-               <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase">Meet <span class="italic font-serif normal-case text-accent">Uma Ma'am</span></h2>
+               <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Meet <span class="italic font-serif normal-case text-accent">Uma Ma'am</span></h2>
             </div>
-            <p class="text-text-gray text-lg leading-relaxed">
+            <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">
               Anuja Mittal Ma'am, widely revered as <strong>Uma Ma'am</strong>, is more than an educator. She is a mentor who has redefined how commerce is taught in Kota.
             </p>
-            <p class="text-text-gray text-lg leading-relaxed">
+            <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">
               With an unwavering focus on <strong>conceptual depth</strong>, she has successfully mentored hundreds of students to achieve perfect or near-perfect scores in Accountancy and Economics. Her philosophy is simple: when you master the logic, the marks follow.
             </p>
             
-            <div class="bg-primary p-10 rounded-[2rem] text-white italic font-medium text-lg leading-relaxed relative overflow-hidden shadow-xl">
+            <div class="bg-primary p-10 rounded-[2rem] text-white italic font-medium text-lg leading-relaxed relative overflow-hidden shadow-xl dark:bg-[#0a1628]">
               <div class="absolute top-0 right-0 p-6 text-accent/20 text-6xl font-serif">"</div>
               <p class="relative z-10">
-                "We don't just prepare students for exams; we prepare them for a lifetime of analytical excellence. Excellence at Uma Commerce Classes is a non-negotiable habit."
+                "We don't just prepare students for exams; we prepare them for a lifetime of analytical excellence. Excellence at Uma Classes is a non-negotiable habit."
               </p>
             </div>
           </div>
@@ -68,11 +68,11 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Elite Philosophy Grid -->
-    <section class="section-padding bg-bg-light">
+    <section class="section-padding bg-bg-light dark:bg-[#0a1628]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-3">
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">The Core Pillars</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight">Elite Teaching Philosophy</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white">Elite Teaching Philosophy</h2>
           <div class="w-20 h-1 bg-accent mx-auto"></div>
         </div>
         
@@ -82,10 +82,10 @@ const base = '/uma-commerce-classes-demo';
             { icon: "🎯", title: "Board Precision", desc: "Rigorous alignment with latest board patterns, ensuring zero surprises on exam day." },
             { icon: "💎", title: "Premium Mentorship", desc: "Ultra-small batches ensuring every student receives the focus they deserve." }
           ].map(item => (
-            <div class="bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+            <div class="bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800">
               <div class="text-5xl mb-8 group-hover:scale-110 transition-transform duration-300 inline-block">{item.icon}</div>
-              <h4 class="text-xl font-bold text-primary mb-4 font-heading">{item.title}</h4>
-              <p class="text-sm text-text-gray leading-relaxed">{item.desc}</p>
+              <h4 class="text-xl font-bold text-primary mb-4 font-heading dark:text-white">{item.title}</h4>
+              <p class="text-sm text-text-gray leading-relaxed dark:text-gray-400">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -93,14 +93,14 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Premium Infrastructure -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-white dark:bg-[#0f1923]">
       <div class="max-w-5xl mx-auto px-4 text-center space-y-16">
         <div class="space-y-4">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase">Elite Infrastructure</h2>
-          <p class="text-text-gray max-w-xl mx-auto">Our campus at Uma Grah is designed to provide a distraction-free, premium learning environment.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Elite Infrastructure</h2>
+          <p class="text-text-gray max-w-xl mx-auto dark:text-gray-400">Our campus at Uma Grah is designed to provide a distraction-free, premium learning environment.</p>
         </div>
         
-        <div class="aspect-video bg-primary rounded-[3rem] border-[16px] border-bg-light shadow-2xl flex items-center justify-center relative overflow-hidden group">
+        <div class="aspect-video bg-primary rounded-[3rem] border-[16px] border-bg-light shadow-2xl flex items-center justify-center relative overflow-hidden group dark:border-[#0a1628]">
            <span class="text-8xl group-hover:scale-125 transition-transform duration-1000">🏫</span>
            <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors"></div>
            <div class="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
@@ -108,7 +108,7 @@ const base = '/uma-commerce-classes-demo';
            </div>
         </div>
         
-        <div class="prose prose-lg mx-auto text-text-gray text-center leading-relaxed font-medium">
+        <div class="prose prose-lg mx-auto text-text-gray text-center leading-relaxed font-medium dark:text-gray-300">
           <p>
             Strategic location at <strong>Uma Grah, New Post Office Road</strong>. Our institute features climate-controlled classrooms, ergonomic seating, and modern audio-visual aids to facilitate a world-class learning experience for Kota's top commerce talent.
           </p>

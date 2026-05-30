@@ -14,22 +14,72 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply bg-white;
   }
+  
+  html.dark {
+    @apply bg-[#0f1923];
+    color-scheme: dark;
+  }
+
   body {
-    @apply antialiased text-text-dark bg-white;
+    @apply antialiased text-text-dark bg-white transition-colors duration-300;
     font-family: var(--font-body);
   }
+
+  html.dark body {
+    @apply text-[#f1f5f9] bg-[#0f1923];
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    @apply font-bold;
+    @apply font-bold text-primary transition-colors duration-300;
+  }
+
+  html.dark h1, 
+  html.dark h2, 
+  html.dark h3, 
+  html.dark h4, 
+  html.dark h5, 
+  html.dark h6 {
+    @apply text-white;
   }
 }
 
 @layer components {
   .btn-gold {
-    @apply bg-accent text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-[#b3943e] hover:shadow-lg active:scale-95;
+    @apply bg-accent text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-[#b3943e] hover:shadow-lg active:scale-95 cursor-pointer;
   }
+  
   .section-padding {
     @apply py-16 md:py-24;
+  }
+
+  /* Dark mode overrides */
+  html.dark .bg-white {
+    @apply bg-[#1a2332];
+  }
+
+  html.dark .bg-bg-light {
+    @apply bg-[#0a1628];
+  }
+
+  html.dark .border-gray-100,
+  html.dark .border-gray-50 {
+    @apply border-gray-800;
+  }
+
+  html.dark .text-text-gray {
+    @apply text-gray-400;
+  }
+
+  html.dark .text-primary {
+    @apply text-white;
+  }
+
+  html.dark .shadow-sm,
+  html.dark .shadow-xl,
+  html.dark .shadow-2xl {
+    @apply shadow-none border border-gray-800;
   }
 }

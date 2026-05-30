@@ -6,7 +6,7 @@ interface Props {
 	description?: string;
 }
 
-const { title, description = "Uma Commerce Classes - Where Excellence is a Habit. Premier coaching for 11th & 12th Commerce in Kota, Rajasthan." } = Astro.props;
+const { title, description = "Uma Classes - Where Excellence is a Habit. Premier coaching for 11th & 12th Commerce in Kota, Rajasthan." } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,29 +16,36 @@ const { title, description = "Uma Commerce Classes - Where Excellence is a Habit
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title} | Uma Commerce Classes</title>
+		<title>{title} | Uma Classes</title>
 		<meta name="description" content={description} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+		
+			if (theme === 'light') {
+				document.documentElement.classList.remove('dark');
+			} else {
+				document.documentElement.classList.add('dark');
+			}
+			window.localStorage.setItem('theme', theme);
+		</script>
 	</head>
-	<body>
+	<body class="transition-colors duration-300">
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
 		font-family: 'Inter', system-ui, sans-serif;
 	}

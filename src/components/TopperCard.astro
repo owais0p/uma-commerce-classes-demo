@@ -11,9 +11,9 @@ interface Props {
 const { name, score, subject, year, image, isStar = false } = Astro.props;
 ---
 
-<div class={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 ${isStar ? 'ring-2 ring-accent ring-offset-4' : ''}`}>
+<div class={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 ${isStar ? 'ring-2 ring-accent ring-offset-4 dark:ring-offset-[#0f1923]' : ''}`}>
   <!-- Student Image -->
-  <div class="aspect-[4/5] overflow-hidden bg-gray-100 relative">
+  <div class="aspect-[4/5] overflow-hidden bg-gray-100 relative dark:bg-[#0a1628]">
     {image ? (
       <img 
         src={image} 
@@ -21,13 +21,13 @@ const { name, score, subject, year, image, isStar = false } = Astro.props;
         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
       />
     ) : (
-      <div class="w-full h-full flex items-center justify-center text-4xl text-gray-300 bg-bg-light">
+      <div class="w-full h-full flex items-center justify-center text-4xl text-gray-300 bg-bg-light dark:bg-[#0a1628] dark:text-gray-700">
         {name.charAt(0)}
       </div>
     )}
     
     <!-- Achievement Badge -->
-    <div class="absolute top-4 right-4 bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+    <div class="absolute top-4 right-4 bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg dark:bg-accent/90">
       {score}
     </div>
     
@@ -40,9 +40,9 @@ const { name, score, subject, year, image, isStar = false } = Astro.props;
 
   <!-- Content -->
   <div class="p-6 text-center">
-    <h3 class="text-lg font-bold text-primary mb-1 group-hover:text-accent transition-colors duration-300 font-heading tracking-tight">{name}</h3>
+    <h3 class="text-lg font-bold text-primary mb-1 group-hover:text-accent transition-colors duration-300 font-heading tracking-tight dark:text-white">{name}</h3>
     <p class="text-[11px] font-bold text-accent uppercase tracking-[0.2em] mb-3">{subject} • {year}</p>
     
-    <div class="w-12 h-0.5 bg-gray-100 mx-auto group-hover:w-20 group-hover:bg-accent transition-all duration-500"></div>
+    <div class="w-12 h-0.5 bg-gray-100 mx-auto group-hover:w-20 group-hover:bg-accent transition-all duration-500 dark:bg-gray-800"></div>
   </div>
 </div>

@@ -7,23 +7,49 @@ import TopperCard from '../components/TopperCard.astro';
 
 const base = '/uma-commerce-classes-demo';
 
-const toppers = [
-  { name: "Ravneet Singh Makhija", score: "99/100", subject: "Accountancy", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003101.png`, isStar: true },
-  { name: "Aditya Sharma", score: "96/100", subject: "Accountancy", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003119.png` },
-  { name: "Priya Verma", score: "95/100", subject: "Economics", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003134.png` },
-  { name: "Kunal Gupta", score: "94/100", subject: "Business Studies", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003147.png` },
-  { name: "Sneha Jain", score: "92/100", subject: "Accountancy", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003158.png` },
-  { name: "Rohan Malhotra", score: "91/100", subject: "Economics", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003210.png` },
-  { name: "Ananya Singh", score: "90/100", subject: "Business Studies", year: "2024", image: `${base}/images/toppers/Screenshot 2026-05-31 003222.png` },
+// Dynamic Topper Data Extraction from Filenames
+const topperFiles = [
+  "Ravneet Singh Makhija-Accountancy 99-100.png",
+  "Ritika Tulsani -Accountancy 99-100.png",
+  "Sanika Agarwal-Accountancy 98-100.png",
+  "Jayant Jeswani-Accountancy 96-100.png",
+  "Jaideep Singh -Accountancy 95-100.png",
+  "Krish Garg-Accountancy 94-100.png",
+  "Poorva Bhandari -Accountancy 93-100.png",
+  "Bhavya Jadon -Accountancy 90-100.png",
+  "Laviksha Keswani -Accountancy 91-100.png",
+  "Manreet Kaur -Accountancy 91-100.png",
+  "Vivek Jethwani -Accountancy 85-100.png"
 ];
+
+const parseTopper = (filename: string) => {
+  const namePart = filename.split('-')[0].trim();
+  const rest = filename.split('-').slice(1).join('-');
+  const subject = rest.split(/\d/)[0].trim();
+  const marksMatch = rest.match(/(\d+-\d+)/);
+  const marks = marksMatch ? marksMatch[0].replace('-', '/') : "90+/100";
+  
+  return {
+    name: namePart,
+    subject: subject || "Accountancy",
+    score: marks,
+    image: `${base}/images/toppers/${filename}`,
+    isStar: marks.startsWith('99'),
+    year: "2024"
+  };
+};
+
+const allToppers = topperFiles.map(parseTopper);
+const starToppers = allToppers.filter(t => t.isStar);
+const otherToppers = allToppers.filter(t => !t.isStar);
 ---
 
-<Layout title="Elite Results" description="Celebrating the success of our elite toppers. Explore the outstanding board exam results from Uma Commerce Classes, Kota.">
+<Layout title="Elite Results" description="Witness the record-breaking success of Uma Classes students in 12th Board Exams. Elite commerce coaching in Kota.">
   <Navbar />
   
-  <main>
+  <main class="dark:bg-[#0f1923] transition-colors duration-300">
     <!-- Page Header -->
-    <section class="bg-primary text-white py-24 relative overflow-hidden">
+    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628]">
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-10 left-10 w-48 h-48 bg-accent rounded-full filter blur-3xl"></div>
       </div>
@@ -37,46 +63,54 @@ const toppers = [
       </div>
     </section>
 
-    <!-- Star Result Spotlight Redesign -->
-    <section class="section-padding bg-bg-light">
+    <!-- Star Results Spotlight -->
+    <section class="section-padding bg-bg-light dark:bg-[#0f1923]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-          <TopperCard {...toppers[0]} />
-          
-          <div class="mt-12 bg-white p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-8 text-accent/10 text-8xl">📰</div>
-            <div class="relative z-10">
-               <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Media Recognition</p>
-               <h3 class="text-2xl font-bold text-primary font-heading mb-4">"A Record-Breaking Year in Kota"</h3>
-               <p class="text-text-gray leading-relaxed text-lg italic border-l-4 border-accent pl-6">
-                 "Uma Commerce Classes has once again set the gold standard in coaching. With 15+ students securing 90%+ marks, the institute continues to be the first choice for serious commerce aspirants."
-                 <br />
-                 <span class="block mt-4 text-sm font-bold text-primary">— Dainik Bhaskar Bureau</span>
-               </p>
-            </div>
+        <div class="text-center mb-16 space-y-3">
+          <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Top Scorers</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">The 99% Achievement</h2>
+          <div class="w-20 h-1 bg-accent mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {starToppers.map(topper => (
+            <TopperCard {...topper} />
+          ))}
+        </div>
+        
+        <div class="mt-20 bg-white p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 max-w-4xl mx-auto">
+          <div class="absolute top-0 right-0 p-8 text-accent/10 text-8xl">📰</div>
+          <div class="relative z-10">
+             <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Media Recognition</p>
+             <h3 class="text-2xl font-bold text-primary font-heading mb-4 dark:text-white transition-colors duration-300">"A Record-Breaking Year in Kota"</h3>
+             <p class="text-text-gray leading-relaxed text-lg italic border-l-4 border-accent pl-6 dark:text-gray-400">
+               "Uma Classes has once again set the gold standard in coaching. With 15+ students securing 90%+ marks, the institute continues to be the first choice for serious commerce aspirants."
+               <br />
+               <span class="block mt-4 text-sm font-bold text-primary dark:text-accent transition-colors duration-300">— Dainik Bhaskar Bureau</span>
+             </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Wall of Fame Grid -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-3">
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Consistent Excellence</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight">Elite Rankers Gallery</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Elite Rankers Gallery</h2>
           <div class="w-20 h-1 bg-accent mx-auto"></div>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {toppers.slice(1).map(topper => (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {otherToppers.map(topper => (
             <TopperCard {...topper} />
           ))}
         </div>
         
         <div class="mt-24 text-center">
-          <div class="inline-block p-1 bg-bg-light rounded-full mb-8">
-             <div class="px-8 py-3 bg-white rounded-full border border-gray-100 shadow-sm text-sm text-text-gray font-medium">
+          <div class="inline-block p-1 bg-bg-light rounded-full mb-8 dark:bg-[#1a2332]">
+             <div class="px-8 py-3 bg-white rounded-full border border-gray-100 shadow-sm text-sm text-text-gray font-medium dark:bg-[#0a1628] dark:border-gray-800 dark:text-gray-400">
                And 15+ more students with distinction scores in multiple subjects.
              </div>
           </div>
