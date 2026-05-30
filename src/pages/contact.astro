@@ -7,121 +7,141 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
 const base = '/uma-commerce-classes-demo';
 ---
 
-<Layout title="Contact Us" description="Get in touch with Uma Commerce Classes in Kota. Call us at 9351595412 or visit our institute at Uma Grah, New Post Office Road.">
+<Layout title="Elite Contact" description="Connect with the elite commerce coaching institute in Kota. Book your free demo class at Uma Commerce Classes.">
   <Navbar />
   
   <main>
     <!-- Page Header -->
-    <section class="bg-primary text-white py-20 relative overflow-hidden">
+    <section class="bg-primary text-white py-24 relative overflow-hidden">
       <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-secondary rounded-full filter blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full filter blur-3xl"></div>
       </div>
-      <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
-        <h1 class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tight">Contact <span class="text-secondary">Us</span></h1>
-        <p class="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-          Have questions? We're here to help you start your journey towards academic excellence.
+      <div class="max-w-7xl mx-auto px-4 text-center relative z-10 space-y-4">
+        <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Direct Channel</p>
+        <h1 class="text-4xl md:text-5xl font-bold font-heading uppercase tracking-tight">Connect with <span class="text-accent italic font-serif normal-case">Us</span></h1>
+        <div class="w-20 h-1 bg-accent mx-auto mt-6"></div>
+        <p class="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed pt-4">
+          Secure your seat for the elite commerce experience. Our advisors are ready to guide you.
         </p>
       </div>
     </section>
 
-    <!-- Contact Details & Form -->
-    <section class="py-24 bg-white">
+    <!-- Elite Contact Grid -->
+    <section class="section-padding bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <!-- Contact Info -->
-          <div>
-            <h2 class="text-3xl font-black text-primary mb-8 uppercase tracking-tight">Get In Touch</h2>
-            <div class="space-y-10">
-              <div class="flex items-start space-x-6">
-                <div class="w-14 h-14 bg-secondary/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl">📍</div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">Our Location</h4>
-                  <p class="text-gray-600 leading-relaxed">
-                    Uma Grah, New Post Office Road,<br />
-                    Kota, Rajasthan - 324001
-                  </p>
-                  <a href="#" class="text-primary font-bold text-sm mt-2 inline-block border-b-2 border-secondary">Get Directions on Maps</a>
-                </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+          <!-- Info Side -->
+          <div class="space-y-12">
+            <div class="space-y-3">
+              <h2 class="text-3xl font-bold text-primary font-heading tracking-tight uppercase">Visit the <span class="text-accent italic font-serif normal-case">Campus</span></h2>
+              <p class="text-text-gray">Experience the premium learning environment at Uma Grah.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div class="space-y-4">
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner">📍</div>
+                <h4 class="font-bold text-primary text-sm uppercase tracking-widest">Location</h4>
+                <p class="text-sm text-text-gray leading-relaxed">
+                  Uma Grah, New Post Office Road,<br />
+                  Kota, Rajasthan - 324001
+                </p>
               </div>
               
-              <div class="flex items-start space-x-6">
-                <div class="w-14 h-14 bg-secondary/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl">📞</div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">Call or WhatsApp</h4>
-                  <p class="text-gray-600 mb-1">+91 93515 95412</p>
-                  <p class="text-gray-600">+91 94144 54052</p>
-                </div>
+              <div class="space-y-4">
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner">📞</div>
+                <h4 class="font-bold text-primary text-sm uppercase tracking-widest">Elite Desk</h4>
+                <p class="text-sm text-text-gray">
+                  +91 93515 95412<br />
+                  +91 94144 54052
+                </p>
               </div>
               
-              <div class="flex items-start space-x-6">
-                <div class="w-14 h-14 bg-secondary/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl">✉️</div>
-                <div>
-                  <h4 class="text-xl font-bold text-primary mb-2">Email Address</h4>
-                  <p class="text-gray-600">info@umacommerceclasses.com</p>
-                  <p class="text-gray-600">anuja.mittal@gmail.com</p>
-                </div>
+              <div class="space-y-4">
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner">✉️</div>
+                <h4 class="font-bold text-primary text-sm uppercase tracking-widest">Electronic Mail</h4>
+                <p class="text-sm text-text-gray">
+                  info@umacommerceclasses.com
+                </p>
               </div>
-
-              <!-- Quick CTA -->
-              <div class="bg-primary text-white p-8 rounded-[2rem] shadow-2xl relative overflow-hidden">
-                <div class="relative z-10">
-                  <h3 class="text-xl font-black text-secondary mb-2 uppercase">Free 5-Day Demo</h3>
-                  <p class="text-white/70 text-sm mb-6">Experience our teaching quality before you enroll. No strings attached!</p>
-                  <a href="https://wa.me/919351595412" class="inline-block bg-white text-primary px-6 py-2 rounded-lg font-bold hover:bg-secondary transition-colors">Chat on WhatsApp</a>
-                </div>
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-8xl font-black rotate-12">FREE</div>
+              
+              <div class="space-y-4">
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner">⌛</div>
+                <h4 class="font-bold text-primary text-sm uppercase tracking-widest">Office Hours</h4>
+                <p class="text-sm text-text-gray">
+                  Mon - Sat: 10:00 AM - 8:00 PM<br />
+                  Sunday: By Appointment
+                </p>
               </div>
+            </div>
+            
+            <!-- Elite QR/Quick Action -->
+            <div class="p-10 bg-primary rounded-[2rem] text-white relative overflow-hidden group">
+               <div class="relative z-10 flex items-center justify-between">
+                  <div class="space-y-2">
+                    <h3 class="text-xl font-bold font-heading text-accent">Instant WhatsApp Support</h3>
+                    <p class="text-xs text-white/50">Average response time: &lt; 15 minutes</p>
+                    <div class="pt-4">
+                       <a href="https://wa.me/919351595412" class="btn-gold px-8 py-3 text-sm">Open Chat</a>
+                    </div>
+                  </div>
+                  <div class="text-6xl grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110">💬</div>
+               </div>
+               <div class="absolute inset-0 bg-white/5 -skew-x-12 translate-x-1/2"></div>
             </div>
           </div>
 
-          <!-- Inquiry Form -->
-          <div class="bg-gray-50 p-10 rounded-[3rem] border border-gray-100 shadow-xl">
-            <h3 class="text-2xl font-black text-primary mb-8 text-center uppercase">Send an Inquiry</h3>
-            <form class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Student Name</label>
-                  <input type="text" placeholder="Full Name" class="w-full px-4 py-4 rounded-xl bg-white border border-gray-200 focus:border-secondary outline-none transition-all shadow-sm" />
+          <!-- Elite Form Side -->
+          <div>
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-100 relative">
+              <h3 class="text-2xl font-bold text-primary mb-2 font-heading tracking-tight">Elite Enrollment Enquiry</h3>
+              <p class="text-xs text-text-gray mb-10">Please provide your details for a personalized academic consultation.</p>
+              
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-1.5">
+                    <label class="text-[10px] font-bold text-text-gray uppercase tracking-widest ml-1">Student Name</label>
+                    <input type="text" placeholder="Full Name" class="w-full px-5 py-4 rounded-lg bg-bg-light border border-gray-100 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 outline-none transition-all text-sm" />
+                  </div>
+                  <div class="space-y-1.5">
+                    <label class="text-[10px] font-bold text-text-gray uppercase tracking-widest ml-1">Parent's Phone</label>
+                    <input type="tel" placeholder="10-digit number" class="w-full px-5 py-4 rounded-lg bg-bg-light border border-gray-100 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 outline-none transition-all text-sm" />
+                  </div>
                 </div>
-                <div>
-                  <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Phone Number</label>
-                  <input type="tel" placeholder="10-digit number" class="w-full px-4 py-4 rounded-xl bg-white border border-gray-200 focus:border-secondary outline-none transition-all shadow-sm" />
+                <div class="space-y-1.5">
+                  <label class="text-[10px] font-bold text-text-gray uppercase tracking-widest ml-1">Academic Level</label>
+                  <select class="w-full px-5 py-4 rounded-lg bg-bg-light border border-gray-100 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 outline-none transition-all text-sm cursor-pointer appearance-none">
+                    <option>Class 11th Commerce Elite</option>
+                    <option>Class 12th Commerce Elite</option>
+                    <option>Session 2026-27 Registration</option>
+                  </select>
                 </div>
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Select Class</label>
-                <select class="w-full px-4 py-4 rounded-xl bg-white border border-gray-200 focus:border-secondary outline-none transition-all shadow-sm">
-                  <option>Class 11th Commerce</option>
-                  <option>Class 12th Commerce</option>
-                  <option>Other / General Inquiry</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Your Message</label>
-                <textarea rows="4" placeholder="Tell us which subjects you're interested in..." class="w-full px-4 py-4 rounded-xl bg-white border border-gray-200 focus:border-secondary outline-none transition-all shadow-sm resize-none"></textarea>
-              </div>
-              <button type="submit" class="w-full bg-primary text-white py-5 rounded-xl font-black text-lg hover:bg-primary-dark transition-all shadow-xl uppercase tracking-wider">
-                Send Inquiry Now
-              </button>
-            </form>
-            <p class="text-center text-gray-400 text-xs mt-6 italic">We usually respond within 2-4 business hours.</p>
+                <div class="space-y-1.5">
+                  <label class="text-[10px] font-bold text-text-gray uppercase tracking-widest ml-1">Subjects of Interest</label>
+                  <textarea rows="4" placeholder="Mention subjects (e.g., Accounts, Eco) and any specific queries..." class="w-full px-5 py-4 rounded-lg bg-bg-light border border-gray-100 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 outline-none transition-all text-sm resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full btn-gold py-5 text-sm uppercase tracking-[0.2em] font-bold shadow-xl shadow-accent/20">
+                  Submit Elite Inquiry
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Map Placeholder -->
+    <!-- Map Redesign Placeholder -->
     <section class="pb-24 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto h-[450px] bg-gray-100 rounded-[3rem] border-4 border-white shadow-2xl overflow-hidden relative flex items-center justify-center group">
-        <div class="text-center p-12 relative z-10">
-          <div class="text-6xl mb-6 group-hover:scale-110 transition-transform">📍</div>
-          <h3 class="text-2xl font-black text-primary mb-2 uppercase">Our Institute Location</h3>
-          <p class="text-gray-500 italic">Uma Grah, New Post Office Road, Kota, Rajasthan</p>
-          <div class="mt-8">
-            <span class="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm shadow-lg">Google Maps Integration Area</span>
-          </div>
+      <div class="max-w-7xl mx-auto h-[500px] bg-bg-light rounded-[3rem] border-8 border-white shadow-2xl overflow-hidden relative group">
+        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center">
+           <div class="text-center space-y-4">
+              <span class="text-6xl group-hover:scale-125 transition-transform duration-1000 inline-block">🗺️</span>
+              <h3 class="text-xl font-bold text-primary font-heading uppercase tracking-widest">Google Maps Integration</h3>
+              <p class="text-xs text-text-gray max-w-xs mx-auto italic">Strategic academic location: Uma Grah, Kota</p>
+           </div>
         </div>
-        <div class="absolute inset-0 bg-primary/5"></div>
+        <div class="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-6 py-3 rounded-xl border border-gray-100 shadow-lg text-[10px] font-bold uppercase tracking-widest text-primary">
+          Premium Campus Location
+        </div>
       </div>
     </section>
   </main>

@@ -2,42 +2,44 @@
 const { base = '/uma-commerce-classes-demo' } = Astro;
 ---
 
-<nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+<nav class="bg-white text-primary sticky top-0 z-50 border-b border-gray-100 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       <!-- Logo and Name -->
       <div class="flex items-center space-x-3">
-        <a href={`${base}/`} class="flex flex-col">
-          <span class="text-xl md:text-2xl font-bold tracking-tight text-secondary leading-tight">UMA COMMERCE CLASSES</span>
-          <span class="text-[10px] md:text-xs tracking-widest uppercase font-medium text-white/80">Where Excellence is a Habit</span>
+        <a href={`${base}/`} class="flex flex-col group">
+          <span class="text-xl md:text-2xl font-bold tracking-tight text-primary leading-tight group-hover:text-accent transition-colors">UMA COMMERCE CLASSES</span>
+          <span class="text-[10px] md:text-xs tracking-widest uppercase font-medium text-text-gray">Where Excellence is a Habit</span>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href={`${base}/`} class="hover:text-secondary transition-colors font-medium">Home</a>
-        <a href={`${base}/courses`} class="hover:text-secondary transition-colors font-medium">Courses</a>
-        <a href={`${base}/results`} class="hover:text-secondary transition-colors font-medium">Results</a>
-        <a href={`${base}/about`} class="hover:text-secondary transition-colors font-medium">About</a>
-        <a href={`${base}/contact`} class="hover:text-secondary transition-colors font-medium">Contact</a>
+        <a href={`${base}/`} class="hover:text-accent transition-colors font-medium text-sm">Home</a>
+        <a href={`${base}/courses`} class="hover:text-accent transition-colors font-medium text-sm">Courses</a>
+        <a href={`${base}/results`} class="hover:text-accent transition-colors font-medium text-sm">Results</a>
+        <a href={`${base}/about`} class="hover:text-accent transition-colors font-medium text-sm">About</a>
+        <a href={`${base}/contact`} class="hover:text-accent transition-colors font-medium text-sm">Contact</a>
       </div>
 
       <!-- Phone and CTA -->
       <div class="hidden lg:flex items-center space-x-6">
-        <div class="flex flex-col text-right">
-          <span class="text-xs text-white/70">Call Us</span>
-          <a href="tel:+919351595412" class="text-sm font-bold hover:text-secondary">+91 93515 95412</a>
-        </div>
-        <a href={`${base}/contact`} class="bg-secondary text-primary px-6 py-2.5 rounded-full font-bold hover:bg-white transition-all transform hover:scale-105 shadow-md">
+        <a href="tel:+919351595412" class="text-sm font-bold hover:text-accent transition-colors flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          93515 95412
+        </a>
+        <a href={`${base}/contact`} class="btn-gold">
           Free Demo Class
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" class="text-white focus:outline-none p-2">
-          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <button id="mobile-menu-button" class="text-primary focus:outline-none p-2" aria-label="Toggle Menu">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
@@ -45,16 +47,21 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-white/10">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
     <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col items-center text-center">
-      <a href={`${base}/`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">Home</a>
-      <a href={`${base}/courses`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">Courses</a>
-      <a href={`${base}/results`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">Results</a>
-      <a href={`${base}/about`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">About</a>
-      <a href={`${base}/contact`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full text-secondary">Contact</a>
-      <div class="pt-4 flex flex-col items-center space-y-3">
-        <a href="tel:+919351595412" class="text-lg font-bold">+91 93515 95412</a>
-        <a href={`${base}/contact`} class="bg-secondary text-primary px-8 py-3 rounded-full font-bold w-full max-w-xs shadow-lg">
+      <a href={`${base}/`} class="block px-3 py-3 text-base font-medium hover:bg-bg-light rounded-md w-full">Home</a>
+      <a href={`${base}/courses`} class="block px-3 py-3 text-base font-medium hover:bg-bg-light rounded-md w-full">Courses</a>
+      <a href={`${base}/results`} class="block px-3 py-3 text-base font-medium hover:bg-bg-light rounded-md w-full">Results</a>
+      <a href={`${base}/about`} class="block px-3 py-3 text-base font-medium hover:bg-bg-light rounded-md w-full">About</a>
+      <a href={`${base}/contact`} class="block px-3 py-3 text-base font-medium hover:bg-bg-light rounded-md w-full">Contact</a>
+      <div class="pt-4 flex flex-col items-center space-y-3 w-full">
+        <a href="tel:+919351595412" class="text-lg font-bold flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          93515 95412
+        </a>
+        <a href={`${base}/contact`} class="btn-gold w-full max-w-xs">
           Free Demo Class
         </a>
       </div>
@@ -65,8 +72,14 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
 <script>
   const button = document.getElementById('mobile-menu-button');
   const menu = document.getElementById('mobile-menu');
+  const path = document.getElementById('menu-icon-path');
 
   button?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
+    if (menu?.classList.contains('hidden')) {
+      path?.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    } else {
+      path?.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+    }
   });
 </script>
