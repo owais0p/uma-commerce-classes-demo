@@ -25,13 +25,13 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
       <!-- Theme Toggle, Phone and CTA -->
       <div class="hidden lg:flex items-center space-x-6">
         <!-- Theme Toggle -->
-        <button id="theme-toggle" class="p-2 rounded-lg bg-bg-light text-primary hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:text-accent dark:hover:bg-gray-700" aria-label="Toggle Dark Mode">
-          <svg id="sun-icon" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg id="moon-icon" class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
+        <button 
+          id="theme-toggle" 
+          class="p-1 cursor-pointer flex items-center justify-center w-[28px] h-[28px] bg-transparent border-none outline-none shadow-none" 
+          aria-label="Toggle Dark Mode"
+        >
+          <i data-lucide="sun" class="hidden dark:block" style="width:20px; height:20px; color:#c9a84c; stroke-width:2;"></i>
+          <i data-lucide="moon" class="block dark:hidden" style="width:20px; height:20px; color:#c9a84c; stroke-width:2;"></i>
         </button>
 
         <a href="tel:+919351595412" class="text-sm font-bold hover:text-accent transition-colors flex items-center gap-2 dark:text-gray-300">
@@ -48,13 +48,13 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
       <!-- Mobile Tools -->
       <div class="md:hidden flex items-center space-x-4">
         <!-- Theme Toggle Mobile -->
-        <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-bg-light text-primary dark:bg-gray-800 dark:text-accent" aria-label="Toggle Dark Mode">
-          <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
+        <button 
+          id="theme-toggle-mobile" 
+          class="p-1 cursor-pointer flex items-center justify-center w-[28px] h-[28px] bg-transparent border-none outline-none shadow-none" 
+          aria-label="Toggle Dark Mode"
+        >
+          <i data-lucide="sun" class="hidden dark:block" style="width:20px; height:20px; color:#c9a84c; stroke-width:2;"></i>
+          <i data-lucide="moon" class="block dark:hidden" style="width:20px; height:20px; color:#c9a84c; stroke-width:2;"></i>
         </button>
         <button id="mobile-menu-button" class="text-primary focus:outline-none p-2 dark:text-white" aria-label="Toggle Menu">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,4 +114,8 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
 
   themeToggle?.addEventListener('click', handleToggle);
   themeToggleMobile?.addEventListener('click', handleToggle);
+
+  // Initialize Lucide Icons
+  // @ts-ignore
+  lucide.createIcons();
 </script>
