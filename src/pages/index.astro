@@ -62,14 +62,14 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 							<span class="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
 							<span>Admission Open: Batch 23rd March 2026</span>
 						</div>
-						<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-primary font-heading tracking-tight max-w-2xl mx-auto lg:mx-0 dark:text-white transition-colors duration-300">
+						<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-primary font-heading tracking-tight max-w-2xl mx-auto lg:mx-0 dark:text-white transition-colors duration-500 delay-[500ms] animate-from-left">
 							Marks Nahi... <br />
 							<span class="text-accent italic font-serif">TOPPER</span> Banna Hai?
 						</h1>
-						<p class="text-lg text-text-gray max-w-xl mx-auto lg:mx-0 leading-relaxed dark:text-gray-400 transition-colors duration-300">
+						<p class="text-lg text-text-gray max-w-xl mx-auto lg:mx-0 leading-relaxed dark:text-gray-400 transition-colors duration-500 delay-[700ms] animate-from-left">
 							Redefining commerce education in Kota with premium coaching, elite faculty, and a tradition of 100/100 scores.
 						</p>
-						<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 pt-4">
+						<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 pt-4 delay-[900ms] animate-from-bottom">
 							<a href={`${base}/contact`} class="btn-gold px-12 py-4 text-lg shadow-xl shadow-accent/20">
 								Start 5-Day Free Demo
 							</a>
@@ -82,13 +82,13 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 						</div>
 						
 						<!-- Elite Stats -->
-						<div class="grid grid-cols-3 gap-8 pt-12 border-t border-gray-100 max-w-lg mx-auto lg:mx-0 dark:border-gray-800 transition-colors duration-300">
+						<div id="stats-section" class="grid grid-cols-3 gap-8 pt-12 border-t border-gray-100 max-w-lg mx-auto lg:mx-0 dark:border-gray-800 transition-colors duration-300">
 							<div>
-								<p class="text-2xl font-bold text-primary font-heading dark:text-white transition-colors duration-300">15+</p>
+								<p class="text-2xl font-bold text-primary font-heading dark:text-white transition-colors duration-300" data-counter="15" data-suffix="+">0</p>
 								<p class="text-[10px] text-text-gray uppercase tracking-widest font-bold dark:text-gray-500">90%+ Scores</p>
 							</div>
 							<div>
-								<p class="text-2xl font-bold text-primary font-heading dark:text-white transition-colors duration-300">99/100</p>
+								<p class="text-2xl font-bold text-primary font-heading dark:text-white transition-colors duration-300" data-counter="99" data-suffix="/100">0</p>
 								<p class="text-[10px] text-text-gray uppercase tracking-widest font-bold dark:text-gray-500">Top Accounts</p>
 							</div>
 							<div>
@@ -99,12 +99,12 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 					</div>
 					
 					<!-- Premium Form Card -->
-					<div class="lg:col-span-5 relative">
+					<div class="lg:col-span-5 relative delay-[500ms] animate-from-right">
 						<div class="bg-white rounded-2xl p-10 shadow-2xl shadow-primary/5 border border-gray-50 relative z-10 dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300">
 							<h3 class="text-2xl font-bold text-primary mb-2 font-heading dark:text-white transition-colors duration-300">Enquire Now</h3>
 							<p class="text-sm text-text-gray mb-8 dark:text-gray-400">Begin your journey to excellence today.</p>
 							
-							<form class="space-y-5">
+							<form class="space-y-5 animate-on-scroll">
 								<div class="space-y-1.5">
 									<label class="text-[10px] font-bold text-text-gray uppercase tracking-widest ml-1 dark:text-gray-500">Full Name</label>
 									<input type="text" placeholder="e.g., Ravneet Singh" class="w-full px-5 py-4 rounded-lg bg-bg-light border border-gray-100 focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/5 outline-none transition-all text-sm dark:bg-[#0a1628] dark:border-gray-700 dark:text-white dark:focus:bg-[#0f1923]" />
@@ -135,15 +135,15 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		<!-- Trust Strip -->
 		<section class="bg-primary text-white py-12 dark:bg-[#0a1628] transition-colors duration-300">
 			<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 text-center md:text-left">
-				<div class="space-y-1">
+				<div class="space-y-1 animate-on-scroll">
 					<p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Media Recognition</p>
 					<h4 class="text-xl font-heading">As Featured in <span class="italic">Dainik Bhaskar</span></h4>
 				</div>
-				<div class="h-12 w-px bg-white/10 hidden md:block"></div>
-				<p class="text-white/60 text-sm max-w-md leading-relaxed italic">
+				<div class="h-12 w-px bg-white/10 hidden md:block animate-on-scroll"></div>
+				<p class="text-white/60 text-sm max-w-md leading-relaxed italic animate-on-scroll">
 					"A landmark of commerce results in Kota — Uma Classes consistently delivers 90%+ achievers year after year."
 				</p>
-				<div class="flex items-center space-x-2 bg-white/5 px-6 py-3 rounded-full border border-white/10">
+				<div class="flex items-center space-x-2 bg-white/5 px-6 py-3 rounded-full border border-white/10 animate-on-scroll">
 					<span class="text-accent text-xl font-bold">15+</span>
 					<span class="text-[10px] font-bold uppercase tracking-widest text-white/70">Top Rankers 2026</span>
 				</div>
@@ -153,7 +153,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		<!-- Features -->
 		<section class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16 space-y-3">
+				<div class="text-center mb-16 space-y-3 animate-on-scroll">
 					<p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">The Uma Edge</p>
 					<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Why Choose Elite Coaching?</h2>
 					<div class="w-20 h-1 bg-accent mx-auto"></div>
@@ -166,7 +166,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 						{ title: "Smart Hybrid", desc: "Modern teaching tools for deeper conceptual clarity.", icon: "💻" },
 						{ title: "AC Elite Class", desc: "Premium environment designed for focused learning.", icon: "❄️" }
 					].map(feature => (
-						<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300">
+						<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll">
 							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 inline-block">{feature.icon}</div>
 							<h4 class="text-lg font-bold text-primary mb-3 font-heading dark:text-white transition-colors duration-300">{feature.title}</h4>
 							<p class="text-sm text-text-gray leading-relaxed dark:text-gray-400 transition-colors duration-300">{feature.desc}</p>
@@ -179,7 +179,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		<!-- Star Student Spotlight -->
 		<section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300 relative overflow-hidden">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-				<div class="bg-primary rounded-[2rem] p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden dark:bg-[#0a1628] transition-colors duration-300">
+				<div class="bg-primary rounded-[2rem] p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden dark:bg-[#0a1628] transition-colors duration-300 animate-on-scroll">
 					<div class="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/2"></div>
 					
 					<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -217,7 +217,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		<!-- Courses Quick Preview -->
 		<section id="courses" class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+				<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 animate-on-scroll">
 					<div class="space-y-3 text-center md:text-left">
 						<p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Premium Programs</p>
 						<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Elite Commerce Stream</h2>
@@ -254,7 +254,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		<!-- Call to Action -->
 		<section class="py-20 bg-white dark:bg-[#0f1923] transition-colors duration-300">
 			<div class="max-w-5xl mx-auto px-4 text-center">
-				<div class="bg-accent/5 rounded-[3rem] p-12 md:p-20 border border-accent/10 dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300">
+				<div class="bg-accent/5 rounded-[3rem] p-12 md:p-20 border border-accent/10 dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll">
 					<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading mb-6 dark:text-white transition-colors duration-300">Elevate Your Academic Performance</h2>
 					<p class="text-text-gray mb-10 max-w-2xl mx-auto text-lg leading-relaxed dark:text-gray-400 transition-colors duration-300">
 						Limited seats available for the 2026-27 session. Experience the premium coaching that has transformed hundreds of students into toppers.

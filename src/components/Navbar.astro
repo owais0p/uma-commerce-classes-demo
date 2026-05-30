@@ -2,7 +2,7 @@
 const { base = '/uma-commerce-classes-demo' } = Astro;
 ---
 
-<nav class="bg-white text-primary sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-colors duration-300 dark:bg-[#0f1923] dark:border-gray-800">
+<nav id="main-nav" class="bg-transparent text-primary sticky top-0 z-50 transition-all duration-500 dark:text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       <!-- Logo and Name -->
@@ -15,11 +15,11 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href={`${base}/`} class="hover:text-accent transition-colors font-medium text-sm dark:text-gray-300">Home</a>
-        <a href={`${base}/courses`} class="hover:text-accent transition-colors font-medium text-sm dark:text-gray-300">Courses</a>
-        <a href={`${base}/results`} class="hover:text-accent transition-colors font-medium text-sm dark:text-gray-300">Results</a>
-        <a href={`${base}/about`} class="hover:text-accent transition-colors font-medium text-sm dark:text-gray-300">About</a>
-        <a href={`${base}/contact`} class="hover:text-accent transition-colors font-medium text-sm dark:text-gray-300">Contact</a>
+        <a href={`${base}/`} class="hover:text-accent transition-colors font-medium text-sm">Home</a>
+        <a href={`${base}/courses`} class="hover:text-accent transition-colors font-medium text-sm">Courses</a>
+        <a href={`${base}/results`} class="hover:text-accent transition-colors font-medium text-sm">Results</a>
+        <a href={`${base}/about`} class="hover:text-accent transition-colors font-medium text-sm">About</a>
+        <a href={`${base}/contact`} class="hover:text-accent transition-colors font-medium text-sm">Contact</a>
       </div>
 
       <!-- Theme Toggle, Phone and CTA -->
@@ -34,13 +34,13 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
           <i data-lucide="moon" class="block dark:hidden" style="width:20px; height:20px; color:#c9a84c; stroke-width:2;"></i>
         </button>
 
-        <a href="tel:+919351595412" class="text-sm font-bold hover:text-accent transition-colors flex items-center gap-2 dark:text-gray-300">
+        <a href="tel:+919351595412" class="text-sm font-bold hover:text-accent transition-colors flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           93515 95412
         </a>
-        <a href={`${base}/contact`} class="btn-gold">
+        <a href={`${base}/contact`} class="btn-gold pulse-animation">
           Free Demo Class
         </a>
       </div>
@@ -114,6 +114,18 @@ const { base = '/uma-commerce-classes-demo' } = Astro;
 
   themeToggle?.addEventListener('click', handleToggle);
   themeToggleMobile?.addEventListener('click', handleToggle);
+
+  // Navbar Scroll Logic
+  const mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      mainNav?.classList.remove('bg-transparent');
+      mainNav?.classList.add('bg-white', 'shadow-md', 'dark:bg-[#0f1923]', 'dark:border-gray-800');
+    } else {
+      mainNav?.classList.add('bg-transparent');
+      mainNav?.classList.remove('bg-white', 'shadow-md', 'dark:bg-[#0f1923]', 'dark:border-gray-800');
+    }
+  });
 
   // Initialize Lucide Icons
   // @ts-ignore

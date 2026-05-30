@@ -43,6 +43,55 @@ const { title, description = "Uma Classes - Where Excellence is a Habit. Premier
 	</head>
 	<body class="transition-colors duration-300">
 		<slot />
+
+		<script is:inline>
+			// Intersection Observer for Scroll Animations
+			const observerOptions = {
+				threshold: 0.1
+			};
+
+			const scrollObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+
+			// Counter Animation Logic
+			function animateCounter(el, target, duration = 2000) {
+				let start = 0;
+				const step = target / (duration / 16);
+				const timer = setInterval(() => {
+					start += step;
+					if (start >= target) {
+						el.textContent = target + (el.dataset.suffix || '');
+						clearInterval(timer);
+					} else {
+						el.textContent = Math.floor(start) + (el.dataset.suffix || '');
+					}
+				}, 16);
+			}
+
+			// Observer for Stats Counter
+			const counterObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const counters = entry.target.querySelectorAll('[data-counter]');
+						counters.forEach(c => {
+							const target = parseInt(c.dataset.counter);
+							if (target) animateCounter(c, target);
+						});
+						counterObserver.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.5 });
+
+			const statsSection = document.querySelector('#stats-section');
+			if (statsSection) counterObserver.observe(statsSection);
+		</script>
 	</body>
 </html>
 
