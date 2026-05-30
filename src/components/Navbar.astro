@@ -1,0 +1,72 @@
+---
+const { base = '/uma-commerce-classes-demo' } = Astro;
+---
+
+<nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo and Name -->
+      <div class="flex items-center space-x-3">
+        <a href={`${base}/`} class="flex flex-col">
+          <span class="text-xl md:text-2xl font-bold tracking-tight text-secondary leading-tight">UMA COMMERCE CLASSES</span>
+          <span class="text-[10px] md:text-xs tracking-widest uppercase font-medium text-white/80">Where Excellence is a Habit</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href={`${base}/`} class="hover:text-secondary transition-colors font-medium">Home</a>
+        <a href={`${base}/courses`} class="hover:text-secondary transition-colors font-medium">Courses</a>
+        <a href={`${base}/results`} class="hover:text-secondary transition-colors font-medium">Results</a>
+        <a href={`${base}/about`} class="hover:text-secondary transition-colors font-medium">About</a>
+        <a href={`${base}/contact`} class="hover:text-secondary transition-colors font-medium">Contact</a>
+      </div>
+
+      <!-- Phone and CTA -->
+      <div class="hidden lg:flex items-center space-x-6">
+        <div class="flex flex-col text-right">
+          <span class="text-xs text-white/70">Call Us</span>
+          <a href="tel:+919351595412" class="text-sm font-bold hover:text-secondary">+91 93515 95412</a>
+        </div>
+        <a href={`${base}/contact`} class="bg-secondary text-primary px-6 py-2.5 rounded-full font-bold hover:bg-white transition-all transform hover:scale-105 shadow-md">
+          Free Demo Class
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-white focus:outline-none p-2">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-white/10">
+    <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col items-center text-center">
+      <a href={`${base}/`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">Home</a>
+      <a href={`${base}/courses`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">Courses</a>
+      <a href={`${base}/results`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">Results</a>
+      <a href={`${base}/about`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full">About</a>
+      <a href={`${base}/contact`} class="block px-3 py-3 text-base font-medium hover:bg-primary-light rounded-md w-full text-secondary">Contact</a>
+      <div class="pt-4 flex flex-col items-center space-y-3">
+        <a href="tel:+919351595412" class="text-lg font-bold">+91 93515 95412</a>
+        <a href={`${base}/contact`} class="bg-secondary text-primary px-8 py-3 rounded-full font-bold w-full max-w-xs shadow-lg">
+          Free Demo Class
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
