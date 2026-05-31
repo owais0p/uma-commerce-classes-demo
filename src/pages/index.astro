@@ -75,7 +75,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 							</a>
 							<a href="#courses" class="px-12 py-4 text-lg font-bold text-primary hover:text-accent transition-colors flex items-center justify-center gap-2 group border border-gray-100 rounded-lg hover:border-accent dark:text-white dark:border-gray-800">
 								Explore Courses
-								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 								</svg>
 							</a>
@@ -167,7 +167,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 						{ title: "AC Classrooms", desc: "Comfortable environment designed for focused learning.", icon: "❄️" }
 					].map(feature => (
 						<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll">
-							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 inline-block">{feature.icon}</div>
+							<div class="text-4xl mb-6 transition-opacity duration-300 inline-block">{feature.icon}</div>
 							<h4 class="text-lg font-bold text-primary mb-3 font-heading dark:text-white transition-colors duration-300">{feature.title}</h4>
 							<p class="text-sm text-text-gray leading-relaxed dark:text-gray-400 transition-colors duration-300">{feature.desc}</p>
 						</div>

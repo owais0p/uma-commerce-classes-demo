@@ -18,7 +18,7 @@ const { name, score, subject, year, image, isStar = false } = Astro.props;
       <img 
         src={image} 
         alt={name} 
-        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
+        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
       />
     ) : (
       <div class="w-full h-full flex items-center justify-center text-4xl text-gray-300 bg-bg-light dark:bg-[#0a1628] dark:text-gray-700">

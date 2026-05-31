@@ -32,7 +32,7 @@ const base = '/uma-commerce-classes-demo';
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div class="relative">
             <div class="aspect-[4/5] bg-bg-light rounded-[3rem] overflow-hidden border-[16px] border-white shadow-2xl relative z-10 flex items-center justify-center group dark:bg-[#1a2332] dark:border-gray-800">
-              <span class="text-[12rem] opacity-20 group-hover:scale-110 transition-transform duration-700">👩‍🏫</span>
+              <span class="text-[12rem] opacity-20 transition-opacity duration-700">👩‍🏫</span>
               <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
               <div class="absolute bottom-12 left-12 text-white">
                 <p class="text-3xl font-bold font-heading tracking-tight">Anuja Mittal Ma'am</p>
@@ -83,7 +83,7 @@ const base = '/uma-commerce-classes-demo';
             { icon: "💎", title: "Personalized Mentorship", desc: "Small batches ensuring every student receives the focus they deserve." }
           ].map(item => (
             <div class="bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800">
-              <div class="text-5xl mb-8 group-hover:scale-110 transition-transform duration-300 inline-block">{item.icon}</div>
+              <div class="text-5xl mb-8 transition-opacity duration-300 inline-block">{item.icon}</div>
               <h4 class="text-xl font-bold text-primary mb-4 font-heading dark:text-white">{item.title}</h4>
               <p class="text-sm text-text-gray leading-relaxed dark:text-gray-400">{item.desc}</p>
             </div>
