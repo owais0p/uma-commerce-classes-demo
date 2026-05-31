@@ -10,9 +10,9 @@ const base = '/uma-commerce-classes-demo';
 <Layout title="Courses" description="Explore our commerce curriculum for 11th and 12th standard. Expert-led coaching in Accountancy, Business Studies, and Economics in Kota.">
   <Navbar />
   
-  <main>
+  <main class="dark:bg-[#0f1923] transition-colors duration-300">
     <!-- Page Header -->
-    <section class="bg-primary text-white py-24 relative overflow-hidden">
+    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628]">
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full filter blur-3xl"></div>
       </div>
@@ -27,31 +27,31 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Course Breakdown -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-32">
           <!-- Accountancy Redesign -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="order-2 lg:order-1 space-y-8">
+            <div class="order-2 lg:order-1 space-y-8 animate-on-scroll">
               <div class="space-y-2">
                 <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Core Mastery</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase">Accountancy</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Accountancy</h2>
               </div>
-              <p class="text-text-gray text-lg leading-relaxed">
+              <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">
                 The cornerstone of commerce education. Our program simplifies complex accounting standards into intuitive logic, ensuring students master every entry and statement.
               </p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2">Class 11th Focus</h4>
-                  <ul class="text-sm text-text-gray space-y-3">
+                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2 dark:text-white">Class 11th Focus</h4>
+                  <ul class="text-sm text-text-gray space-y-3 dark:text-gray-400">
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Foundation Ledger systems</li>
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Trial Balance Mastery</li>
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Final Accounts Logic</li>
                   </ul>
                 </div>
                 <div class="space-y-4">
-                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2">Class 12th Focus</h4>
-                  <ul class="text-sm text-text-gray space-y-3">
+                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2 dark:text-white">Class 12th Focus</h4>
+                  <ul class="text-sm text-text-gray space-y-3 dark:text-gray-400">
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Partnership Complexities</li>
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Corporate Shares Accounting</li>
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Analytical Ratio Mastery</li>
@@ -67,28 +67,28 @@ const base = '/uma-commerce-classes-demo';
                  </a>
               </div>
             </div>
-            <div class="order-1 lg:order-2">
-               <div class="aspect-square bg-bg-light rounded-[3rem] flex items-center justify-center relative overflow-hidden group">
+            <div class="order-1 lg:order-2 animate-on-scroll">
+               <div class="aspect-square bg-bg-light rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332]">
                   <span class="text-[12rem] transition-transform duration-700 drop-shadow-2xl">📊</span>
-                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem]"></div>
+                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5"></div>
                </div>
             </div>
           </div>
 
           <!-- Business Studies Redesign -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-               <div class="aspect-square bg-accent/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group">
+            <div class="animate-on-scroll">
+               <div class="aspect-square bg-accent/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332]">
                   <span class="text-[12rem] transition-transform duration-700 drop-shadow-2xl">🏢</span>
-                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem]"></div>
+                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5"></div>
                </div>
             </div>
-            <div class="space-y-8">
+            <div class="space-y-8 animate-on-scroll">
               <div class="space-y-2">
                 <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Strategic Management</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase">Business Studies</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Business Studies</h2>
               </div>
-              <p class="text-text-gray text-lg leading-relaxed">
+              <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">
                 Beyond textbooks. We bridge the gap between theory and the corporate world through intensive case study analysis and mnemonic-based learning.
               </p>
               <div class="space-y-5">
@@ -100,8 +100,8 @@ const base = '/uma-commerce-classes-demo';
                   <div class="flex items-start gap-4">
                     <div class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent text-[10px] flex-shrink-0 mt-1">✓</div>
                     <div>
-                       <h5 class="font-bold text-primary text-sm">{item.title}</h5>
-                       <p class="text-xs text-text-gray mt-1">{item.desc}</p>
+                       <h5 class="font-bold text-primary text-sm dark:text-white">{item.title}</h5>
+                       <p class="text-xs text-text-gray mt-1 dark:text-gray-400">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -114,40 +114,40 @@ const base = '/uma-commerce-classes-demo';
 
           <!-- Economics Redesign -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="order-2 lg:order-1 space-y-8">
+            <div class="order-2 lg:order-1 space-y-8 animate-on-scroll">
               <div class="space-y-2">
                 <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Analytical Insights</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase">Economics</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Economics</h2>
               </div>
-              <p class="text-text-gray text-lg leading-relaxed">
+              <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">
                 Mastering the graph and the logic. We simplify complex economic models into visual insights, ensuring high-retention learning.
               </p>
               <div class="grid grid-cols-2 gap-4">
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
                     <p class="text-2xl mb-2">📈</p>
-                    <p class="text-xs font-bold text-primary">Micro & Macro Focus</p>
+                    <p class="text-xs font-bold text-primary dark:text-white">Micro & Macro Focus</p>
                  </div>
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
                     <p class="text-2xl mb-2">🌍</p>
-                    <p class="text-xs font-bold text-primary">Indian Economy Analysis</p>
+                    <p class="text-xs font-bold text-primary dark:text-white">Indian Economy Analysis</p>
                  </div>
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
                     <p class="text-2xl mb-2">📊</p>
-                    <p class="text-xs font-bold text-primary">Graphical Mastery</p>
+                    <p class="text-xs font-bold text-primary dark:text-white">Graphical Mastery</p>
                  </div>
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
                     <p class="text-2xl mb-2">✍️</p>
-                    <p class="text-xs font-bold text-primary">Project Guidance</p>
+                    <p class="text-xs font-bold text-primary dark:text-white">Project Guidance</p>
                  </div>
               </div>
               <div class="pt-4">
                  <a href={`${base}/contact`} class="btn-gold">View Sample Study Material</a>
               </div>
             </div>
-            <div class="order-1 lg:order-2">
-               <div class="aspect-square bg-primary/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group">
+            <div class="order-1 lg:order-2 animate-on-scroll">
+               <div class="aspect-square bg-primary/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332]">
                   <span class="text-[12rem] transition-transform duration-700 drop-shadow-2xl">📈</span>
-                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem]"></div>
+                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5"></div>
                </div>
             </div>
           </div>
@@ -156,9 +156,9 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Call to Action -->
-    <section class="section-padding bg-bg-light">
+    <section class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300">
       <div class="max-w-4xl mx-auto px-4">
-        <div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+        <div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl dark:bg-[#0a1628] dark:shadow-none dark:border dark:border-gray-800 animate-on-scroll">
           <div class="absolute top-0 right-0 p-12 text-accent/10 text-9xl rotate-12">💎</div>
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs mb-6">Join Us</p>
           <h2 class="text-3xl md:text-4xl font-bold font-heading mb-8 uppercase tracking-tight">New Batch Begins <br /><span class="text-accent">23rd March 2026</span></h2>
