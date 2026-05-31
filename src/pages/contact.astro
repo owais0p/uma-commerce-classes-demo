@@ -12,9 +12,9 @@ const base = '/uma-commerce-classes-demo';
   
   <main class="dark:bg-[#0f1923] transition-colors duration-300">
     <!-- Page Header -->
-    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628]">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full filter blur-3xl"></div>
+    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628] isolation-auto">
+      <div class="absolute inset-0 opacity-10 z-[-1]">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full filter blur-3xl z-[-1]"></div>
       </div>
       <div class="max-w-7xl mx-auto px-4 text-center relative z-10 space-y-4">
         <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Direct Channel</p>
@@ -27,7 +27,7 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Contact Grid -->
-    <section class="section-padding bg-white dark:bg-[#0f1923]">
+    <section class="section-padding bg-white dark:bg-[#0f1923] isolation-auto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <!-- Info Side -->
@@ -39,7 +39,7 @@ const base = '/uma-commerce-classes-demo';
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div class="space-y-4">
-                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner dark:bg-[#1a2332]">📍</div>
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner dark:bg-[#1a2332] card">📍</div>
                 <h4 class="font-bold text-primary text-sm uppercase tracking-widest dark:text-white">Location</h4>
                 <p class="text-sm text-text-gray leading-relaxed dark:text-gray-400">
                   Uma Grah, New Post Office Road,<br />
@@ -48,7 +48,7 @@ const base = '/uma-commerce-classes-demo';
               </div>
               
               <div class="space-y-4">
-                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner dark:bg-[#1a2332]">📞</div>
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner dark:bg-[#1a2332] card">📞</div>
                 <h4 class="font-bold text-primary text-sm uppercase tracking-widest dark:text-white">Call / WhatsApp</h4>
                 <p class="text-sm text-text-gray dark:text-gray-400">
                   +91 93515 95412<br />
@@ -57,7 +57,7 @@ const base = '/uma-commerce-classes-demo';
               </div>
               
               <div class="space-y-4">
-                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner dark:bg-[#1a2332]">⌛</div>
+                <div class="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-xl shadow-inner dark:bg-[#1a2332] card">⌛</div>
                 <h4 class="font-bold text-primary text-sm uppercase tracking-widest dark:text-white">Office Hours</h4>
                 <p class="text-sm text-text-gray dark:text-gray-400">
                   Mon - Sat: 10:00 AM - 8:00 PM<br />
@@ -67,7 +67,7 @@ const base = '/uma-commerce-classes-demo';
             </div>
             
             <!-- WhatsApp Support -->
-            <div class="p-10 bg-primary rounded-[2rem] text-white relative overflow-hidden group dark:bg-[#0a1628]">
+            <div class="p-10 bg-primary rounded-[2rem] text-white relative overflow-hidden group dark:bg-[#0a1628] isolation-auto">
                <div class="relative z-10 flex items-center justify-between">
                   <div class="space-y-2">
                     <h3 class="text-xl font-bold font-heading text-accent">Instant WhatsApp Support</h3>
@@ -78,17 +78,17 @@ const base = '/uma-commerce-classes-demo';
                   </div>
                   <div class="text-6xl grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">💬</div>
                </div>
-               <div class="absolute inset-0 bg-white/5 -skew-x-12 translate-x-1/2"></div>
+               <div class="absolute inset-0 bg-white/5 -skew-x-12 translate-x-1/2 z-[-1]"></div>
             </div>
           </div>
 
           <!-- Enquiry Form Side -->
           <div>
-            <div class="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-100 relative dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300">
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-100 relative dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 isolation-auto card">
               <h3 class="text-2xl font-bold text-primary mb-2 font-heading tracking-tight dark:text-white">Enrollment Enquiry</h3>
               <p class="text-xs text-text-gray mb-10 dark:text-gray-500">Please provide your details for a personalized academic consultation.</p>
               
-              <form class="space-y-6">
+              <form class="space-y-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div class="space-y-1.5">
                     <label class="text-[10px] font-bold text-text-gray uppercase tracking-widest ml-1 dark:text-gray-500">Student Name</label>
@@ -122,8 +122,8 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Map Section -->
-    <section class="pb-24 px-4 sm:px-6 lg:px-8 dark:bg-[#0f1923]">
-      <div class="max-w-7xl mx-auto h-[500px] bg-bg-light rounded-[3rem] border-8 border-white shadow-2xl overflow-hidden relative group dark:border-[#0a1628]">
+    <section class="pb-24 px-4 sm:px-6 lg:px-8 dark:bg-[#0f1923] isolation-auto">
+      <div class="max-w-7xl mx-auto h-[500px] bg-bg-light rounded-[3rem] border-8 border-white shadow-2xl overflow-hidden relative group dark:border-[#0a1628] card">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.6445100000003!2d75.873195!3d25.219335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9a5e8c4c8a3b%3A0x219f64e0442d9b7d!2sUma%20Commerce%20Classes!5e0!3m2!1sen!2sin!4v1717112520000!5m2!1sen!2sin" 
           width="100%" 

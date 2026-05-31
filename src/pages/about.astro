@@ -40,8 +40,8 @@ const base = '/uma-commerce-classes-demo';
               </div>
             </div>
             <!-- Decorative elite rings -->
-            <div class="absolute -top-12 -left-12 w-48 h-48 border border-accent/20 rounded-full -z-0"></div>
-            <div class="absolute -bottom-12 -right-12 w-64 h-64 border-2 border-primary/5 rounded-full -z-0"></div>
+            <div class="absolute -top-12 -left-12 w-48 h-48 border border-accent/20 rounded-full z-[-1]"></div>
+            <div class="absolute -bottom-12 -right-12 w-64 h-64 border-2 border-primary/5 rounded-full z-[-1]"></div>
           </div>
           
           <div class="space-y-8">
@@ -68,7 +68,7 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Philosophy Grid -->
-    <section class="section-padding bg-bg-light dark:bg-[#0a1628]">
+    <section class="section-padding bg-bg-light dark:bg-[#0a1628] isolation-auto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-3">
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">The Core Pillars</p>
@@ -82,7 +82,7 @@ const base = '/uma-commerce-classes-demo';
             { icon: "🎯", title: "Board Precision", desc: "Rigorous alignment with latest board patterns, ensuring zero surprises on exam day." },
             { icon: "💎", title: "Personalized Mentorship", desc: "Small batches ensuring every student receives the focus they deserve." }
           ].map(item => (
-            <div class="bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800">
+            <div class="bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 card">
               <div class="text-5xl mb-8 transition-opacity duration-300 inline-block">{item.icon}</div>
               <h4 class="text-xl font-bold text-primary mb-4 font-heading dark:text-white">{item.title}</h4>
               <p class="text-sm text-text-gray leading-relaxed dark:text-gray-400">{item.desc}</p>
@@ -93,7 +93,7 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Infrastructure -->
-    <section class="section-padding bg-white dark:bg-[#0f1923]">
+    <section class="section-padding bg-white dark:bg-[#0f1923] isolation-auto">
       <div class="max-w-5xl mx-auto px-4 text-center space-y-8">
         <h2 class="text-3xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Our Campus</h2>
         <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">

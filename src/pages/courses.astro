@@ -12,9 +12,9 @@ const base = '/uma-commerce-classes-demo';
   
   <main class="dark:bg-[#0f1923] transition-colors duration-300">
     <!-- Page Header -->
-    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628]">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full filter blur-3xl"></div>
+    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628] isolation-auto">
+      <div class="absolute inset-0 opacity-10 z-[-1]">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full filter blur-3xl z-[-1]"></div>
       </div>
       <div class="max-w-7xl mx-auto px-4 text-center relative z-10 space-y-4">
         <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Academic Excellence</p>
@@ -27,7 +27,7 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Course Breakdown -->
-    <section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300">
+    <section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300 isolation-auto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-32">
           <!-- Accountancy Redesign -->
@@ -42,7 +42,7 @@ const base = '/uma-commerce-classes-demo';
               </p>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div class="space-y-4">
-                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2 dark:text-white">Class 11th Focus</h4>
+                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2 dark:text-white">Class 11th Focus</h4>    
                   <ul class="text-sm text-text-gray space-y-3 dark:text-gray-400">
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Foundation Ledger systems</li>
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Trial Balance Mastery</li>
@@ -50,7 +50,7 @@ const base = '/uma-commerce-classes-demo';
                   </ul>
                 </div>
                 <div class="space-y-4">
-                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2 dark:text-white">Class 12th Focus</h4>
+                  <h4 class="font-bold text-primary font-heading border-b border-accent/20 pb-2 dark:text-white">Class 12th Focus</h4>    
                   <ul class="text-sm text-text-gray space-y-3 dark:text-gray-400">
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Partnership Complexities</li>
                     <li class="flex items-center gap-2"><span class="text-accent">✦</span> Corporate Shares Accounting</li>
@@ -68,9 +68,9 @@ const base = '/uma-commerce-classes-demo';
               </div>
             </div>
             <div class="order-1 lg:order-2 animate-on-scroll">
-               <div class="aspect-square bg-bg-light rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332]">
+               <div class="aspect-square bg-bg-light rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332] card">
                   <span class="text-[12rem] transition-transform duration-700 drop-shadow-2xl">📊</span>
-                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5"></div>
+                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5 z-[-1]"></div>
                </div>
             </div>
           </div>
@@ -78,9 +78,9 @@ const base = '/uma-commerce-classes-demo';
           <!-- Business Studies Redesign -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="animate-on-scroll">
-               <div class="aspect-square bg-accent/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332]">
+               <div class="aspect-square bg-accent/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332] card">
                   <span class="text-[12rem] transition-transform duration-700 drop-shadow-2xl">🏢</span>
-                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5"></div>
+                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5 z-[-1]"></div>
                </div>
             </div>
             <div class="space-y-8 animate-on-scroll">
@@ -123,19 +123,19 @@ const base = '/uma-commerce-classes-demo';
                 Mastering the graph and the logic. We simplify complex economic models into visual insights, ensuring high-retention learning.
               </p>
               <div class="grid grid-cols-2 gap-4">
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 card">
                     <p class="text-2xl mb-2">📈</p>
                     <p class="text-xs font-bold text-primary dark:text-white">Micro & Macro Focus</p>
                  </div>
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 card">
                     <p class="text-2xl mb-2">🌍</p>
                     <p class="text-xs font-bold text-primary dark:text-white">Indian Economy Analysis</p>
                  </div>
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 card">
                     <p class="text-2xl mb-2">📊</p>
                     <p class="text-xs font-bold text-primary dark:text-white">Graphical Mastery</p>
                  </div>
-                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800">
+                 <div class="p-6 bg-bg-light rounded-2xl border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 card">
                     <p class="text-2xl mb-2">✍️</p>
                     <p class="text-xs font-bold text-primary dark:text-white">Project Guidance</p>
                  </div>
@@ -145,9 +145,9 @@ const base = '/uma-commerce-classes-demo';
               </div>
             </div>
             <div class="order-1 lg:order-2 animate-on-scroll">
-               <div class="aspect-square bg-primary/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332]">
+               <div class="aspect-square bg-primary/5 rounded-[3rem] flex items-center justify-center relative overflow-hidden group dark:bg-[#1a2332] card">
                   <span class="text-[12rem] transition-transform duration-700 drop-shadow-2xl">📈</span>
-                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5"></div>
+                  <div class="absolute inset-0 border-[20px] border-white/50 rounded-[3rem] dark:border-white/5 z-[-1]"></div>
                </div>
             </div>
           </div>
@@ -156,10 +156,10 @@ const base = '/uma-commerce-classes-demo';
     </section>
 
     <!-- Call to Action -->
-    <section class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300">
+    <section class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300 isolation-auto">
       <div class="max-w-4xl mx-auto px-4">
-        <div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl dark:bg-[#0a1628] dark:shadow-none dark:border dark:border-gray-800 animate-on-scroll">
-          <div class="absolute top-0 right-0 p-12 text-accent/10 text-9xl rotate-12">💎</div>
+        <div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl dark:bg-[#0a1628] dark:shadow-none dark:border dark:border-gray-800 animate-on-scroll isolation-auto">
+          <div class="absolute top-0 right-0 p-12 text-accent/10 text-9xl rotate-12 z-[-1]">💎</div>
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs mb-6">Join Us</p>
           <h2 class="text-3xl md:text-4xl font-bold font-heading mb-8 uppercase tracking-tight">New Batch Begins <br /><span class="text-accent">23rd March 2026</span></h2>
           <p class="text-white/50 mb-12 max-w-xl mx-auto italic">"The best time to start your journey to success is now. Secure your seat in Kota's trusted commerce institute."</p>
@@ -169,7 +169,7 @@ const base = '/uma-commerce-classes-demo';
         </div>
       </div>
     </section>
-  </main>
+    </main>
   
   <Footer />
   <FloatingWhatsApp />

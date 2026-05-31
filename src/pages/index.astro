@@ -126,14 +126,14 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 							</form>
 						</div>
 						<!-- Decorative backdrop for form -->
-						<div class="absolute -bottom-6 -right-6 w-full h-full bg-bg-light rounded-2xl -z-0 dark:bg-accent/5"></div>
+						<div class="absolute -bottom-6 -right-6 w-full h-full bg-bg-light rounded-2xl z-[-1] dark:bg-accent/5"></div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Trust Strip -->
-		<section class="bg-primary text-white py-12 dark:bg-[#0a1628] transition-colors duration-300">
+		<section class="bg-primary text-white py-12 dark:bg-[#0a1628] transition-colors duration-300 isolation-auto">
 			<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 text-center md:text-left">
 				<div class="space-y-1 animate-on-scroll">
 					<p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Media Recognition</p>
@@ -151,7 +151,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		</section>
 
 		<!-- Features -->
-		<section class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300">
+		<section class="section-padding bg-bg-light dark:bg-[#0f1923] transition-colors duration-300 isolation-auto">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="text-center mb-16 space-y-3 animate-on-scroll">
 					<p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">The Uma Edge</p>
@@ -166,7 +166,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 						{ title: "Smart Hybrid", desc: "Modern teaching tools for deeper conceptual clarity.", icon: "💻" },
 						{ title: "AC Classrooms", desc: "Comfortable environment designed for focused learning.", icon: "❄️" }
 					].map(feature => (
-						<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll">
+						<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll card">
 							<div class="text-4xl mb-6 transition-opacity duration-300 inline-block">{feature.icon}</div>
 							<h4 class="text-lg font-bold text-primary mb-3 font-heading dark:text-white transition-colors duration-300">{feature.title}</h4>
 							<p class="text-sm text-text-gray leading-relaxed dark:text-gray-400 transition-colors duration-300">{feature.desc}</p>
@@ -177,10 +177,10 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 		</section>
 
 		<!-- Star Student Spotlight -->
-		<section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300 relative overflow-hidden">
+		<section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300 relative overflow-hidden isolation-auto">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-				<div class="bg-primary rounded-[2rem] p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden dark:bg-[#0a1628] transition-colors duration-300 animate-on-scroll">
-					<div class="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/2"></div>
+				<div class="bg-primary rounded-[2rem] p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden dark:bg-[#0a1628] transition-colors duration-300 animate-on-scroll isolation-auto">
+					<div class="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/2 z-[-1]"></div>
 					
 					<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 						<div class="space-y-8 order-2 lg:order-1">

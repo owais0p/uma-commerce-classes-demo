@@ -49,9 +49,9 @@ const otherToppers = allToppers.filter(t => !t.isStar);
   
   <main class="dark:bg-[#0f1923] transition-colors duration-300">
     <!-- Page Header -->
-    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628]">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-48 h-48 bg-accent rounded-full filter blur-3xl"></div>
+    <section class="bg-primary text-white py-24 relative overflow-hidden dark:bg-[#0a1628] isolation-auto">
+      <div class="absolute inset-0 opacity-10 z-[-1]">
+        <div class="absolute top-10 left-10 w-48 h-48 bg-accent rounded-full filter blur-3xl z-[-1]"></div>
       </div>
       <div class="max-w-7xl mx-auto px-4 text-center relative z-10 space-y-4 animate-on-scroll">
         <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Hall of Fame</p>
@@ -64,7 +64,7 @@ const otherToppers = allToppers.filter(t => !t.isStar);
     </section>
 
     <!-- Star Results Spotlight -->
-    <section class="section-padding bg-bg-light dark:bg-[#0f1923]">
+    <section class="section-padding bg-bg-light dark:bg-[#0f1923] isolation-auto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-3 animate-on-scroll">
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Top Scorers</p>
@@ -78,8 +78,8 @@ const otherToppers = allToppers.filter(t => !t.isStar);
           ))}
         </div>
         
-        <div class="mt-20 bg-white p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 max-w-4xl mx-auto animate-on-scroll">
-          <div class="absolute top-0 right-0 p-8 text-accent/10 text-8xl">📰</div>
+        <div class="mt-20 bg-white p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 max-w-4xl mx-auto animate-on-scroll isolation-auto card">
+          <div class="absolute top-0 right-0 p-8 text-accent/10 text-8xl z-[-1]">📰</div>
           <div class="relative z-10">
              <p class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Media Recognition</p>
              <h3 class="text-2xl font-bold text-primary font-heading mb-4 dark:text-white transition-colors duration-300">"A Record-Breaking Year in Kota"</h3>
@@ -94,7 +94,7 @@ const otherToppers = allToppers.filter(t => !t.isStar);
     </section>
 
     <!-- Wall of Fame Grid -->
-    <section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300">
+    <section class="section-padding bg-white dark:bg-[#0f1923] transition-colors duration-300 isolation-auto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-3">
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Consistent Excellence</p>
