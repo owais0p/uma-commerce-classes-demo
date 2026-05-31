@@ -11,42 +11,38 @@ interface Props {
 const { name, score, subject, year, image, isStar = false } = Astro.props;
 ---
 
-<div class={`group relative glass rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-[0_30px_60px_-10px_rgba(18,33,56,0.2)] dark:hover:shadow-[0_30px_60px_-10px_rgba(201,168,76,0.1)] transition-all duration-700 border border-white/10 card ${isStar ? 'ring-2 ring-accent ring-offset-8 dark:ring-offset-[#080c14]' : ''}`}>
+<div class={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] ${isStar ? 'ring-2 ring-accent ring-offset-4 dark:ring-offset-[#0f1923]' : ''}`}>
   <!-- Student Image -->
-  <div class="aspect-[4/5] overflow-hidden bg-primary/5 relative">
+  <div class="aspect-[4/5] overflow-hidden bg-gray-100 relative dark:bg-[#0a1628]">
     {image ? (
       <img 
         src={image} 
         alt={name} 
-        class="w-full h-full object-cover grayscale brightness-110 contrast-105 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out"
+        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
       />
     ) : (
-      <div class="w-full h-full flex items-center justify-center text-6xl font-heading text-accent/20">
+      <div class="w-full h-full flex items-center justify-center text-4xl text-gray-300 bg-bg-light dark:bg-[#0a1628] dark:text-gray-700">
         {name.charAt(0)}
       </div>
     )}
     
-    <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
-
     <!-- Achievement Badge -->
-    <div class="absolute top-6 right-6 glass px-4 py-2 rounded-full shadow-2xl border border-white/20">
-      <p class="text-xs font-bold text-accent tracking-widest">{score}</p>
+    <div class="absolute top-4 right-4 bg-primary/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg dark:bg-accent/90">
+      {score}
     </div>
     
     {isStar && (
-      <div class="absolute top-6 left-6 bg-accent text-white px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-[0.2em] shadow-2xl">
-        Elite Merit
+      <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+        Star Result
       </div>
     )}
-
-    <!-- Name Overlay on Image for premium feel -->
-    <div class="absolute bottom-8 left-8 right-8">
-      <h3 class="text-2xl font-bold text-white font-heading tracking-tight mb-1 group-hover:text-accent transition-colors duration-500">{name}</h3>
-      <p class="text-[10px] font-bold text-white/70 uppercase tracking-[0.3em]">{subject} • {year}</p>
-    </div>
   </div>
 
-  <!-- Subtle bottom indicator -->
-  <div class="h-1.5 w-0 group-hover:w-full bg-accent transition-all duration-700"></div>
+  <!-- Content -->
+  <div class="p-6 text-center">
+    <h3 class="text-lg font-bold text-primary mb-1 group-hover:text-accent transition-colors duration-300 font-heading tracking-tight dark:text-white">{name}</h3>
+    <p class="text-[11px] font-bold text-accent uppercase tracking-[0.2em] mb-3">{subject} • {year}</p>
+    
+    <div class="w-12 h-0.5 bg-gray-100 mx-auto group-hover:w-20 group-hover:bg-accent transition-all duration-500 dark:bg-gray-800"></div>
+  </div>
 </div>
