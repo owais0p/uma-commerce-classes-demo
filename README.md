@@ -1,46 +1,45 @@
-# Astro Starter Kit: Basics
+# Uma Classes - Elite Commerce Coaching
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the official website repository for **Uma Classes**, Kota's premier institute for 11th and 12th Commerce.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🌟 Key Features
+- **Modern Tech Stack:** Built with Astro and Tailwind CSS v4 for exceptional performance.
+- **Dynamic Content:** Automatic extraction of topper data and results from image filenames.
+- **Responsive Design:** Fully optimized for all devices with a high-end editorial aesthetic.
+- **Dark Mode Support:** Sophisticated dark theme with persistent user preferences.
+- **Interactive UI:** Smooth scroll animations, interactive stats counters, and glassmorphic navigation.
 
-## 🚀 Project Structure
+## 🛠️ Development
 
-Inside of your Astro project, you'll see the following folders and files:
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v22 or later)
+- [npm](https://www.npmjs.com/)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+### Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/owais0p/uma-commerce-classes-demo.git
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Commands
+| Command | Action |
+| :--- | :--- |
+| `npm run dev` | Starts local dev server at `localhost:4321` |
+| `npm run build` | Builds the production site to `./dist/` |
+| `npm run preview` | Previews the build locally |
 
-## 🧞 Commands
+## 🚀 Deployment
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
 
-All commands are run from the root of the project, from a terminal:
+**Live URL:** [https://owais0p.github.io/uma-commerce-classes-demo/](https://owais0p.github.io/uma-commerce-classes-demo/)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📜 Guidelines
+Refer to [GEMINI.md](./GEMINI.md) for detailed architectural standards, design conventions, and technical workflows.
