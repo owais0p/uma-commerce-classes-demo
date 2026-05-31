@@ -21,7 +21,7 @@ const base = '/uma-commerce-classes-demo';
         <h1 class="text-4xl md:text-5xl font-bold font-heading uppercase tracking-tight">The <span class="text-accent italic font-serif normal-case">Institute</span></h1>
         <div class="w-20 h-1 bg-accent mx-auto mt-6"></div>
         <p class="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed pt-4">
-          A tradition of excellence, powered by passion and elite commerce mentorship.
+          A tradition of excellence, powered by passion and dedicated commerce mentorship.
         </p>
       </div>
     </section>
@@ -67,12 +67,12 @@ const base = '/uma-commerce-classes-demo';
       </div>
     </section>
 
-    <!-- Elite Philosophy Grid -->
+    <!-- Philosophy Grid -->
     <section class="section-padding bg-bg-light dark:bg-[#0a1628]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-3">
           <p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">The Core Pillars</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white">Elite Teaching Philosophy</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white">Our Teaching Philosophy</h2>
           <div class="w-20 h-1 bg-accent mx-auto"></div>
         </div>
         
@@ -80,7 +80,7 @@ const base = '/uma-commerce-classes-demo';
           {[
             { icon: "📜", title: "Conceptual Purity", desc: "No shortcuts. We dive deep into the 'Why' of every financial standard and economic model." },
             { icon: "🎯", title: "Board Precision", desc: "Rigorous alignment with latest board patterns, ensuring zero surprises on exam day." },
-            { icon: "💎", title: "Premium Mentorship", desc: "Ultra-small batches ensuring every student receives the focus they deserve." }
+            { icon: "💎", title: "Personalized Mentorship", desc: "Small batches ensuring every student receives the focus they deserve." }
           ].map(item => (
             <div class="bg-white p-12 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800">
               <div class="text-5xl mb-8 group-hover:scale-110 transition-transform duration-300 inline-block">{item.icon}</div>
@@ -92,31 +92,18 @@ const base = '/uma-commerce-classes-demo';
       </div>
     </section>
 
-    <!-- Premium Infrastructure -->
+    <!-- Infrastructure -->
     <section class="section-padding bg-white dark:bg-[#0f1923]">
-      <div class="max-w-5xl mx-auto px-4 text-center space-y-16">
-        <div class="space-y-4">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Elite Infrastructure</h2>
-          <p class="text-text-gray max-w-xl mx-auto dark:text-gray-400">Our campus at Uma Grah is designed to provide a distraction-free, premium learning environment.</p>
-        </div>
-        
-        <div class="aspect-video bg-primary rounded-[3rem] border-[16px] border-bg-light shadow-2xl flex items-center justify-center relative overflow-hidden group dark:border-[#0a1628]">
-           <span class="text-8xl group-hover:scale-125 transition-transform duration-1000">🏫</span>
-           <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors"></div>
-           <div class="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
-             Hi-Tech AC Classrooms
-           </div>
-        </div>
-        
-        <div class="prose prose-lg mx-auto text-text-gray text-center leading-relaxed font-medium dark:text-gray-300">
-          <p>
-            Strategic location at <strong>Uma Grah, New Post Office Road</strong>. Our institute features climate-controlled classrooms, ergonomic seating, and modern audio-visual aids to facilitate a world-class learning experience for Kota's top commerce talent.
-          </p>
-        </div>
+      <div class="max-w-5xl mx-auto px-4 text-center space-y-8">
+        <h2 class="text-3xl font-bold text-primary font-heading tracking-tight uppercase dark:text-white">Our Campus</h2>
+        <p class="text-text-gray text-lg leading-relaxed dark:text-gray-400">
+          Comfortable AC classrooms at Uma Grah,<br />
+          New Post Office Road, Kota.
+        </p>
         
         <div class="pt-8">
-          <a href={`${base}/contact`} class="btn-gold px-16 py-5 text-lg shadow-xl shadow-accent/20">
-            Schedule a Campus Visit
+          <a href={`${base}/contact`} class="btn-gold px-12 py-4 text-lg shadow-xl shadow-accent/20">
+            Visit Us
           </a>
         </div>
       </div>

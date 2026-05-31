@@ -59,7 +59,7 @@
 
 @layer components {
   .btn-gold {
-    @apply bg-accent text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-[#b3943e] hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] cursor-pointer relative overflow-hidden;
+    @apply bg-accent text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-[#b3943e] hover:shadow-lg cursor-pointer relative overflow-hidden w-fit max-w-full;
   }
 
   .btn-gold::after {
@@ -79,23 +79,21 @@
 
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease;
   }
 
   .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0);
   }
 
   .pulse-animation {
-    animation: pulse 2s infinite;
+    @apply transition-opacity duration-300;
   }
 
   @keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(201, 168, 76, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(201, 168, 76, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
   }
 
   .animate-from-left {
@@ -114,18 +112,18 @@
   }
 
   @keyframes fromLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes fromRight {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes fromBottom {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   /* Dark mode overrides */

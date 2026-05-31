@@ -11,7 +11,7 @@ interface Props {
 const { name, score, subject, year, image, isStar = false } = Astro.props;
 ---
 
-<div class={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] ${isStar ? 'ring-2 ring-accent ring-offset-4 dark:ring-offset-[#0f1923]' : ''}`}>
+<div class={`group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:bg-[#1a2332] dark:border-gray-800 hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] ${isStar ? 'ring-2 ring-accent ring-offset-4 dark:ring-offset-[#0f1923]' : ''}`}>
   <!-- Student Image -->
   <div class="aspect-[4/5] overflow-hidden bg-gray-100 relative dark:bg-[#0a1628]">
     {image ? (

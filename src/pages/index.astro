@@ -67,9 +67,9 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 							<span class="text-accent italic font-serif">TOPPER</span> Banna Hai?
 						</h1>
 						<p class="text-lg text-text-gray max-w-xl mx-auto lg:mx-0 leading-relaxed dark:text-gray-400 transition-colors duration-500 delay-[700ms] animate-from-left">
-							Redefining commerce education in Kota with premium coaching, elite faculty, and a tradition of 100/100 scores.
+							Redefining commerce education in Kota with quality coaching, expert faculty, and a tradition of 100/100 scores.
 						</p>
-						<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 pt-4 delay-[900ms] animate-from-bottom">
+						<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 pt-4 delay-[900ms] animate-from-bottom overflow-hidden">
 							<a href={`${base}/contact`} class="btn-gold px-12 py-4 text-lg shadow-xl shadow-accent/20">
 								Start 5-Day Free Demo
 							</a>
@@ -92,7 +92,7 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 								<p class="text-[10px] text-text-gray uppercase tracking-widest font-bold dark:text-gray-500">Top Accounts</p>
 							</div>
 							<div>
-								<p class="text-2xl font-bold text-primary font-heading dark:text-white transition-colors duration-300">Elite</p>
+								<p class="text-2xl font-bold text-primary font-heading dark:text-white transition-colors duration-300">Expert</p>
 								<p class="text-[10px] text-text-gray uppercase tracking-widest font-bold dark:text-gray-500">Faculty</p>
 							</div>
 						</div>
@@ -155,16 +155,16 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="text-center mb-16 space-y-3 animate-on-scroll">
 					<p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">The Uma Edge</p>
-					<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Why Choose Elite Coaching?</h2>
+					<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Why Choose Uma Classes?</h2>
 					<div class="w-20 h-1 bg-accent mx-auto"></div>
 				</div>
 				
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					{[
-						{ title: "Elite Faculty", desc: "Led by Anuja Mittal Ma'am with decades of proven success.", icon: "👨‍🏫" },
-						{ title: "Small Batches", desc: "Ultra-personalized attention for every future topper.", icon: "👥" },
+						{ title: "Expert Faculty", desc: "Led by Anuja Mittal Ma'am with decades of proven success.", icon: "👨‍🏫" },
+						{ title: "Small Batches", desc: "Personalized attention for every student.", icon: "👥" },
 						{ title: "Smart Hybrid", desc: "Modern teaching tools for deeper conceptual clarity.", icon: "💻" },
-						{ title: "AC Elite Class", desc: "Premium environment designed for focused learning.", icon: "❄️" }
+						{ title: "AC Classrooms", desc: "Comfortable environment designed for focused learning.", icon: "❄️" }
 					].map(feature => (
 						<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll">
 							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 inline-block">{feature.icon}</div>
@@ -219,8 +219,8 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 animate-on-scroll">
 					<div class="space-y-3 text-center md:text-left">
-						<p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Premium Programs</p>
-						<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Elite Commerce Stream</h2>
+						<p class="text-accent font-bold uppercase tracking-[0.4em] text-xs">Our Programs</p>
+						<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading tracking-tight dark:text-white transition-colors duration-300">Commerce Stream</h2>
 					</div>
 					<a href={`${base}/courses`} class="text-primary font-bold border-b-2 border-accent pb-1 hover:text-accent transition-colors uppercase tracking-widest text-xs dark:text-white">View All Courses</a>
 				</div>
@@ -228,23 +228,23 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<CourseCard 
 						title="Accountancy"
-						classes="Elite Class 11 & 12"
-						description="Master numerical mastery with conceptual foundations and elite practice."
-						features={["Conceptual Mastery", "Sample Paper Elite", "Practical Approach"]}
+						classes="Class 11 & 12"
+						description="Master numerical mastery with conceptual foundations and thorough practice."
+						features={["Conceptual Mastery", "Sample Paper Practice", "Practical Approach"]}
 						icon="📊"
 					/>
 					<CourseCard 
 						title="Business Studies"
-						classes="Elite Class 11 & 12"
-						description="Strategic management principles explored through elite case studies."
+						classes="Class 11 & 12"
+						description="Strategic management principles explored through real-world case studies."
 						features={["Case Study Analysis", "Memory Mnemonics", "Answer Writing Focus"]}
 						icon="🏢"
 					/>
 					<CourseCard 
 						title="Economics"
-						classes="Elite Class 11 & 12"
+						classes="Class 11 & 12"
 						description="Analytical understanding of global and local economic principles."
-						features={["Graphical Elite", "Current Affairs", "Note Mastery"]}
+						features={["Graphical Mastery", "Current Affairs", "Note Mastery"]}
 						icon="📈"
 					/>
 				</div>
@@ -257,11 +257,11 @@ const starTopper = allToppers.find(t => t.name.includes("Ravneet")) || allTopper
 				<div class="bg-accent/5 rounded-[3rem] p-12 md:p-20 border border-accent/10 dark:bg-[#1a2332] dark:border-gray-800 transition-colors duration-300 animate-on-scroll">
 					<h2 class="text-3xl md:text-4xl font-bold text-primary font-heading mb-6 dark:text-white transition-colors duration-300">Elevate Your Academic Performance</h2>
 					<p class="text-text-gray mb-10 max-w-2xl mx-auto text-lg leading-relaxed dark:text-gray-400 transition-colors duration-300">
-						Limited seats available for the 2026-27 session. Experience the premium coaching that has transformed hundreds of students into toppers.
+						Limited seats available for the 2026-27 session. Experience the quality coaching that has transformed hundreds of students into toppers.
 					</p>
-					<div class="flex flex-col sm:flex-row justify-center gap-4">
+					<div class="flex flex-col sm:flex-row justify-center gap-4 overflow-hidden">
 						<a href={`${base}/contact`} class="btn-gold px-12 py-5 text-lg shadow-xl shadow-accent/20">
-							Book Elite Demo Class
+							Book Free Demo Class
 						</a>
 						<a href="tel:+919351595412" class="px-12 py-5 font-bold text-primary hover:text-accent transition-colors flex items-center justify-center gap-3 bg-white border border-gray-100 rounded-lg dark:bg-[#0a1628] dark:text-white dark:border-gray-800">
 							<span class="text-xl">📞</span> 93515 95412
