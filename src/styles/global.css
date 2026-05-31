@@ -59,7 +59,7 @@
 
 @layer components {
   .btn-gold {
-    @apply bg-accent text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:bg-[#b3943e] hover:shadow-lg cursor-pointer relative overflow-hidden w-fit max-w-full;
+    @apply bg-accent text-white px-6 py-2.5 rounded-lg font-medium transition-colors duration-300 hover:bg-[#b3943e] cursor-pointer relative overflow-hidden w-fit max-w-full;
   }
 
   .btn-gold::after {
