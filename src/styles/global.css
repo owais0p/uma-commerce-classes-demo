@@ -14,7 +14,7 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  * {
+  *:not(html, body, .whatsapp-float) {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
   }
@@ -63,6 +63,27 @@
 }
 
 @layer components {
+  .whatsapp-float {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    width: 56px !important;
+    height: 56px !important;
+    background-color: #25D366 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999 !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(37,211,102,0.5) !important;
+    transition: transform 0.2s !important;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1) !important;
+  }
+
   .card, [class*="card"], .btn-gold, button, [class*="btn"] {
     isolation: isolate;
   }
