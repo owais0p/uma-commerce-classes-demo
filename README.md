@@ -1,6 +1,6 @@
-# Uma Classes - Elite Commerce Coaching
+# Uma Commerce Classes - Elite Commerce Coaching
 
-Welcome to the official website repository for **Uma Classes**, Kota's premier institute for 11th and 12th Commerce.
+Welcome to the official website repository for **Uma Commerce Classes**, Kota's premier institute for 11th and 12th Commerce.
 
 ## 🌟 Key Features
 - **Modern Tech Stack:** Built with Astro and Tailwind CSS v4 for exceptional performance.
